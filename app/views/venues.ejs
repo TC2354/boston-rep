@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head'); %>
+
+<body>
+    <div class="app">
+        <%- include('partials/navbar'); %>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 m-auto pt-4">
+                    <hr>
+                    <div class="row">
+                        <div class="col-12">
+                            <% if(Object.keys(venues).length> 0) { %>
+                                <ul class="nav flex-column">
+                                    <% venues.forEach(venue => { %>
+                                        <li class="nav-item">
+                                            <div class="d-flex justify-content-between py-1">
+                                                <div class="d-flex flex-row">
+                                                    <div>
+                                                        <%= venue.Title %>
+                                                            <p class="text-muted"><small>
+                                                                    <%= venue.Date%>
+                                                                </small></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <% }) %>
+                                </ul>
+                                <% } else { %>
+                                    <div class="text-center"><strong>No Venues Found</strong></div>
+                                    <% }%>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

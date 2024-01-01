@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head'); %>
+
+<body>
+    <div class="app">
+        <%- include('partials/navbar'); %>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 m-auto pt-4">
+                    <form method="POST" action="/" autocomplete="off">
+                        <div class="row">
+                            <div class="col-12 form-group">
+                                <label for="showtime">Add a Showtime</label>
+                                <input type="text" name="showtime" class="form-control" />
+                            </div>
+                        </div>
+                    </form>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
